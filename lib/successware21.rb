@@ -3,7 +3,7 @@ require 'faraday_middleware'
 require 'active_support/all'
 require 'successware21/version'
 
-Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each{|f| require f}
+Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each { |f| require f }
 require File.expand_path('../successware21/configuration', __FILE__)
 require File.expand_path('../successware21/api', __FILE__)
 require File.expand_path('../successware21/client', __FILE__)

@@ -5,35 +5,9 @@ RSpec.describe Successware21 do
     Successware21.reset
   end
 
-  describe ".client" do
-    it "should be a Successware21::Client" do
+  describe '.client' do
+    it 'should be a Successware21::Client' do
       expect(Successware21.client).to be_a(Successware21::Client)
-    end
-  end
-
-  describe '#api_key' do
-    it 'should return the default api key' do
-      expect(Successware21.api_key).to eq(Successware21::Configuration::DEFAULT_API_KEY)
-    end
-  end
-
-  describe '#api_key=' do
-    it 'should set the api key' do
-      Successware21.api_key = 'test'
-      expect(Successware21.api_key).to eq('test')
-    end
-  end
-
-  describe '#api_version' do
-    it 'should return the default api version' do
-      expect(Successware21.api_version).to eq(Successware21::Configuration::DEFAULT_API_VERSION)
-    end
-  end
-
-  describe '#api_version=' do
-    it 'should set the api_version' do
-      Successware21.api_version = '/test'
-      expect(Successware21.api_version).to eq('/test')
     end
   end
 

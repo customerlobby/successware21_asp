@@ -41,7 +41,7 @@ module Successware21
       options[:wOperator]  = options[:wOperator] if options.has_key?(:wOperator)
       options[:wValue]     = options[:wValue] if options.has_key?(:wValue)
 
-      return options
+      options
     end
 
     # TODO: Replace or remove this method if necessary.
@@ -50,7 +50,7 @@ module Successware21
     # @return String
     def format_fields(fields)
       if fields.instance_of?(Array)
-        return fields.join(",")
+        fields.join(',')
       elsif fields.instance_of?(String)
         return fields
       end

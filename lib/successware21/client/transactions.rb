@@ -3,11 +3,11 @@ module Successware21
     module Transactions
 
       def transactions(params = {})
-        response = get("transactions", params)
+        get('transactions', params)
       end
 
       def transaction(id, params = {})
-        response = get("transactions/#{id}", params)
+        get("transactions/#{id}", params)
       end
 
     end
