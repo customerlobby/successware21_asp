@@ -1,4 +1,4 @@
-require 'successware21'
+require 'successware21_asp'
 require 'webmock/rspec'
 
 RSpec.configure do |config|

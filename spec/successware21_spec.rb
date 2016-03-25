@@ -16,7 +16,7 @@ RSpec.describe Successware21Asp do
     end
 
     it 'returns an instance of Successware21::Client if given valid params' do
-      expect(Successware21Asp.client(@valid_params)).to be_a Successware21::Client
+      expect(Successware21Asp.client(@valid_params)).to be_a Successware21Asp::Client
     end
   end
 
