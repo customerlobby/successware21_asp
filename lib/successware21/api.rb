@@ -15,10 +15,6 @@ module Successware21
       end      
     end
 
-    def set_params
-      set_auth_params
-    end
-
     def config
       conf = {}
       Configuration::VALID_OPTIONS_KEYS.each do |key|
