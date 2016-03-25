@@ -29,7 +29,7 @@ connection_id, company_id and session_id before making requests.
 This is built into the gem so you can simply call the set_auth_params method as below._  
 
 ```ruby
-client = Successware21Asp.client({ agent_name: 'name', agent_password: 'password', master_id: 123 })
+client = Successware21Asp.client({ agent_name: 'name', agent_password: 'password', master_id: 123, user_name: 'test user', user_password: 'test pass' })
 client.set_auth_params
 ```
 
