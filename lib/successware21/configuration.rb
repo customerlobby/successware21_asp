@@ -21,9 +21,6 @@ module Successware21
     # By default use the main api URL.
     DEFAULT_ENDPOINT   = 'http://services.successware21.com:2142'.freeze
 
-    # By default request JSON data to be returned from the API.
-    DEFAULT_FORMAT     = :json
-
     attr_accessor *VALID_OPTIONS_KEYS
 
     # Convenience method to allow configuration options to be set in a block

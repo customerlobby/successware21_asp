@@ -5,9 +5,9 @@ module Successware21
       def customers(params = {})
         data = <<-EOF
           <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">
-            <InvoiceChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
-              <UTCDateTime>2010-01-01</UTCDateTime>
-            </InvoiceChangeQuery>
+            <CustomerChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
+              <UTCDateTime>#{params[:date_time]}</UTCDateTime>
+            </CustomerChangeQuery>
           </SessionRequest>
         EOF
         post('/', data)
