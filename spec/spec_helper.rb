@@ -75,11 +75,11 @@ RSpec.configure do |config|
 end
 
 def a_get(path)
-  a_request(:get, "#{Successware21.endpoint}#{Successware21.api_version}/" + path)
+  a_request(:get, "#{Successware21Asp.endpoint}#{Successware21Asp.api_version}/" + path)
 end
 
 def stub_get(path)
-  stub_request(:get, "#{Successware21.endpoint}#{Successware21.api_version}/" + path)
+  stub_request(:get, "#{Successware21Asp.endpoint}#{Successware21Asp.api_version}/" + path)
 end
 
 def fixture_path

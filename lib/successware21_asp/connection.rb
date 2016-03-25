@@ -1,7 +1,7 @@
 require 'faraday_middleware'
 Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each { |f| require f }
 
-module Successware21
+module Successware21Asp
   module Connection
     private
 
@@ -11,7 +11,7 @@ module Successware21
       }
 
       Faraday::Connection.new(options) do |connection|
-        connection.use FaradayMiddleware::Successware21Auth
+        connection.use FaradayMiddleware::Successware21AspAuth
         connection.use FaradayMiddleware::Mashify
         connection.response :xml
         connection.adapter(adapter)

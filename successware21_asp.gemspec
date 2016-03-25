@@ -5,11 +5,11 @@ require 'successware21/version'
 
 Gem::Specification.new do |spec|
   spec.name        = 'successware21'
-  spec.version     = Successware21::VERSION
+  spec.version     = Successware21Asp::VERSION
   spec.authors     = ['Customer Lobby']
   spec.email       = ['dev@customerlobby.com']
-  spec.description = %q{Client for the Successware21 API}
-  spec.summary     = %q{Client for the Successware21 API}
+  spec.description = %q{Client for the Successware21Asp API}
+  spec.summary     = %q{Client for the Successware21Asp API}
   spec.homepage    = ''
   spec.license     = 'MIT'
 

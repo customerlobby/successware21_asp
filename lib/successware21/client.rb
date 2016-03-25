@@ -1,4 +1,4 @@
-module Successware21
+module Successware21Asp
   # Wrapper for the Successware21 REST API.
   class Client < API
     Dir[File.expand_path('../client/*.rb', __FILE__)].each { |f| require f }

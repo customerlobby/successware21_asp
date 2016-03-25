@@ -1,4 +1,4 @@
-module Successware21
+module Successware21Asp
   # Defines HTTP request methods
   module Request
     # Perform an HTTP GET request
@@ -32,7 +32,7 @@ module Successware21
     end
 
     # TODO: Replace these options with whatever options you need to pass for the target API.
-    # Format the Options before you send them off to Successware21
+    # Format the Options before you send them off to Successware21Asp
     def format_options(options)
       return if options.blank?
       options[:fields]    = format_fields(options[:fields]) if options.has_key?(:fields)
@@ -47,7 +47,7 @@ module Successware21
     end
 
     # TODO: Replace or remove this method if necessary.
-    # Format the fields to a format that the Successware21 likes
+    # Format the fields to a format that the Successware21Asp likes
     # @param [Array or String] fields can be specified as an Array or String
     # @return String
     def format_fields(fields)

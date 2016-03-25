@@ -1,13 +1,13 @@
-module Successware21
+module Successware21Asp
   class Client
-    module Transactions
+    module Customers
 
-      def transactions(params = {})
+      def customers(params = {})
         data = <<-EOF
           <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">
-            <InvoiceChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
+            <CustomerChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
               <UTCDateTime>#{params[:date_time]}</UTCDateTime>
-            </InvoiceChangeQuery>
+            </CustomerChangeQuery>
           </SessionRequest>
         EOF
         post('/', data)

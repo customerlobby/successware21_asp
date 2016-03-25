@@ -1,5 +1,5 @@
 module FaradayMiddleware
-  class Successware21Auth < Faraday::Middleware
+  class Successware21AspAuth < Faraday::Middleware
     def initialize(app)
       @app = app
     end
