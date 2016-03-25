@@ -12,9 +12,11 @@ module Successware21
       options = Successware21.options.merge(params)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
-      end
+      end      
+    end
 
-      self.set_auth_params
+    def set_params
+      set_auth_params
     end
 
     def config
