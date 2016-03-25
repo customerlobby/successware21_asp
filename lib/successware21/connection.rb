@@ -1,5 +1,5 @@
 require 'faraday_middleware'
-Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each{|f| require f}
+Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each { |f| require f }
 
 module Successware21
   module Connection
@@ -7,9 +7,9 @@ module Successware21
 
     def connection
       options = {
-        :url => "#{endpoint}/"
+          :url => "#{endpoint}/"
       }
-      
+
       Faraday::Connection.new(options) do |connection|
         connection.use FaradayMiddleware::Successware21Auth
         connection.use FaradayMiddleware::Mashify

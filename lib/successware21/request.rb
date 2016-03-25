@@ -17,12 +17,14 @@ module Successware21
     def request(method, path, options)
       response = connection.send(method) do |request|
         case method
-        when :get
-          formatted_options = format_options(options)
-          request.url(path,formatted_options)
-        when :post, :put
-          request.body = options unless options.empty?
-          request.url(path)
+          when :get
+            formatted_options = format_options(options)
+            request.url(path, formatted_options)
+          when :post, :put
+            request.body = options unless options.empty?
+            request.url(path)
+          else
+            return
         end
       end
 
@@ -33,13 +35,13 @@ module Successware21
     # Format the Options before you send them off to Successware21
     def format_options(options)
       return if options.blank?
-      options[:fields]     = format_fields(options[:fields]) if options.has_key?(:fields)
-      options[:limit]      = options[:limit] if options.has_key?(:limit)
-      options[:pageindex]  = options[:page]  if options.has_key?(:page)
-      options[:q]          = options[:q]  if options.has_key?(:q)
-      options[:wField]     = options[:wField] if options.has_key?(:wField)
-      options[:wOperator]  = options[:wOperator] if options.has_key?(:wOperator)
-      options[:wValue]     = options[:wValue] if options.has_key?(:wValue)
+      options[:fields]    = format_fields(options[:fields]) if options.has_key?(:fields)
+      options[:limit]     = options[:limit] if options.has_key?(:limit)
+      options[:pageindex] = options[:page] if options.has_key?(:page)
+      options[:q]         = options[:q] if options.has_key?(:q)
+      options[:wField]    = options[:wField] if options.has_key?(:wField)
+      options[:wOperator] = options[:wOperator] if options.has_key?(:wOperator)
+      options[:wValue]    = options[:wValue] if options.has_key?(:wValue)
 
       options
     end

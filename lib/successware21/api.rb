@@ -8,7 +8,7 @@ module Successware21
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
     def initialize(params)
-      raise 'Invalid params blah!' unless valid_params?(params)
+      raise 'Invalid params' unless valid_params?(params)
       options = Successware21.options.merge(params)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])

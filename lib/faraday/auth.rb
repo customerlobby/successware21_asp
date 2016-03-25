@@ -1,7 +1,7 @@
 module FaradayMiddleware
   class Successware21Auth < Faraday::Middleware
     def initialize(app)
-      @app          = app
+      @app = app
     end
 
     def call(env)

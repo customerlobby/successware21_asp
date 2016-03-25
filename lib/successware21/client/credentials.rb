@@ -19,7 +19,7 @@ module Successware21
           </Connect>
         EOF
 
-        connection_data = post('/', data)
+        connection_data    = post('/', data)
         self.connection_id = connection_data.ConnectResponse.ConnectionID
       end
 
@@ -30,7 +30,7 @@ module Successware21
           </ConnectionRequest>
         EOF
 
-        company_data = post('/', data)
+        company_data    = post('/', data)
         self.company_id = company_data.CompanyQueryResponse.CompanyQueryData.CompanyQueryRecord.CompanyID
       end
 
@@ -40,14 +40,14 @@ module Successware21
             <BeginSession Version="string">
               <ConnectionID>#{self.connection_id}</ConnectionID>
               <CompanyNo>#{self.company_id}</CompanyNo>
-              <Username>agt_clobby</Username>
-              <UserPassword>clobby12.+</UserPassword>
+              <Username>#{self.user_name}</Username>
+              <UserPassword>#{self.user_password}</UserPassword>
               <Terminal>string</Terminal>
             </BeginSession>
           </ConnectionRequest>
         EOF
 
-        session_data = post('/', data)
+        session_data    = post('/', data)
         self.session_id = session_data.BeginSessionResponse.SessionID
       end
 

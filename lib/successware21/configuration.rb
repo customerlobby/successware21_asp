@@ -3,6 +3,8 @@ module Successware21
 
     REQUIRED_KEYS = [
         :agent_name,
+        :user_name,
+        :user_password,
         :agent_password,
         :master_id
     ]
