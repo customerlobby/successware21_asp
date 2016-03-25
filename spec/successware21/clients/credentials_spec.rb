@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Successware21::Client::Customers do
+RSpec.describe Successware21::Client::Credentials do
   #before do
   #  @client = Successware21::Client.new
   #end

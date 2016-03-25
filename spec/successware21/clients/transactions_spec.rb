@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe Successware21::Client::Transactions do
-  pending "add some examples to (or delete) #{__FILE__}"
   #before do
   #  @client = Successware21::Client.new
   #end
