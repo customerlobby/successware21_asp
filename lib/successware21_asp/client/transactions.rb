@@ -1,4 +1,4 @@
-module Successware21
+module Successware21Asp
   class Client
     module Transactions
 

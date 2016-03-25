@@ -8,16 +8,16 @@ require File.expand_path('../successware21/configuration', __FILE__)
 require File.expand_path('../successware21/api', __FILE__)
 require File.expand_path('../successware21/client', __FILE__)
 
-module Successware21
+module Successware21Asp
 
   extend Configuration
-  # Alias for Successware21::Client.new
-  # @return [Successware21::Client]
+  # Alias for Successware21Asp::Client.new
+  # @return [Successware21Asp::Client]
   def self.client(options = {})
-    Successware21::Client.new(options)
+    Successware21Asp::Client.new(options)
   end
 
-  # Delegate to Successware21::Client
+  # Delegate to Successware21Asp::Client
   def self.method_missing(method, *args, &block)
     return super unless client.respond_to?(method)
     client.send(method, *args, &block)

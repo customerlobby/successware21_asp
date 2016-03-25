@@ -1,4 +1,4 @@
-module Successware21
+module Successware21Asp
   module Response
     def self.create(response_hash)
       data = response_hash.data.dup rescue response_hash

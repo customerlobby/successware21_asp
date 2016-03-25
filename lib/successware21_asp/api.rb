@@ -2,13 +2,13 @@ require File.expand_path('../request', __FILE__)
 require File.expand_path('../response', __FILE__)
 require File.expand_path('../connection', __FILE__)
 
-module Successware21
+module Successware21Asp
   class API
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
     def initialize(options={})
-      options = Successware21.options.merge(options)
+      options = Successware21Asp.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end

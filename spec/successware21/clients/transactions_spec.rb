@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-RSpec.describe Successware21::Client::Transactions do
+RSpec.describe Successware21Asp::Client::Transactions do
   pending "add some examples to (or delete) #{__FILE__}"
   #before do
-  #  @client = Successware21::Client.new
+  #  @client = Successware21Asp::Client.new
   #end
 
   #describe '#transactions' do
