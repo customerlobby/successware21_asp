@@ -1,12 +1,19 @@
 module Successware21
   module Configuration
 
+    REQUIRED_KEYS = [
+        :agent_name,
+        :agent_password,
+        :master_id
+    ]
+
     VALID_OPTIONS_KEYS = [
-        :api_key,
-        :api_version,
+        :connection_id,
+        :company_id,
+        :session_id,
         :adapter,
         :endpoint
-    ].freeze
+    ] + REQUIRED_KEYS.freeze
 
     # Use the default Faraday adapter.
     DEFAULT_ADAPTER    = Faraday.default_adapter
@@ -37,6 +44,7 @@ module Successware21
 
     # Reset all configuration settings to default values.
     def reset
+
       self.endpoint = DEFAULT_ENDPOINT
       self.adapter  = DEFAULT_ADAPTER
     end

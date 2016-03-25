@@ -27,7 +27,7 @@ There are two ways to configure the  gem. You can pass a hash of configuration o
 a client, or you can use a configure block.
 
 ```ruby
-client = Successware21.client
+client = Successware21.client({ agent_name: 'name', agent_password: 'password', master_id: 123_ })
 ```
 
 ```ruby

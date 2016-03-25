@@ -10,9 +10,8 @@ module Successware21
         :url => "#{endpoint}/"
       }
       
-      # TODO: Remove or update the Successware21Auth middleware as needed. See the faraday/auth.rb
       Faraday::Connection.new(options) do |connection|
-        connection.use FaradayMiddleware::Successware21Auth, api_key
+        connection.use FaradayMiddleware::Successware21Auth
         connection.use FaradayMiddleware::Mashify
         connection.response :xml
         connection.adapter(adapter)

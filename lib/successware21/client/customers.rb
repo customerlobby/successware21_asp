@@ -4,22 +4,14 @@ module Successware21
 
       def customers(params = {})
         data = <<-EOF
-          <Connect Version="string">
-            <AgentName>clobby</AgentName>
-            <AgentPassword>clobby12.+</AgentPassword>
-            <MasterID>69191</MasterID>
-            <Mode>string</Mode>
-            <ServerURL>string</ServerURL>
-          </Connect>
+          <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">
+            <InvoiceChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
+              <UTCDateTime>2010-01-01</UTCDateTime>
+            </InvoiceChangeQuery>
+          </SessionRequest>
         EOF
-
         post('/', data)
       end
-
-      def customer(id, params = {})
-        get("customers/#{id}", params)
-      end
-
     end
   end
 end

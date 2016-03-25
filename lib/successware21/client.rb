@@ -5,5 +5,6 @@ module Successware21
 
     include Successware21::Client::Customers
     include Successware21::Client::Transactions
+    include Successware21::Client::Credentials
   end
 end
