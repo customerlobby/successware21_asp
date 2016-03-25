@@ -4,7 +4,6 @@ module Successware21Asp
 
       def set_auth_params
         set_connection_id
-        set_company_id
         set_session_id
       end
 
@@ -21,17 +20,6 @@ module Successware21Asp
 
         connection_data    = post('/', data)
         self.connection_id = connection_data.ConnectResponse.ConnectionID
-      end
-
-      def set_company_id
-        data = <<-EOF
-          <ConnectionRequest Version="string" ConnectionID="#{self.connection_id}" RequestID="string">
-            <CompanyQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string"/>
-          </ConnectionRequest>
-        EOF
-
-        company_data    = post('/', data)
-        self.company_id = company_data.CompanyQueryResponse.CompanyQueryData.CompanyQueryRecord.CompanyID
       end
 
       def set_session_id

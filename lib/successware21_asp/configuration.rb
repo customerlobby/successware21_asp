@@ -6,12 +6,12 @@ module Successware21Asp
         :user_name,
         :user_password,
         :agent_password,
-        :master_id
+        :master_id,
+        :company_id
     ]
 
     VALID_OPTIONS_KEYS = [
         :connection_id,
-        :company_id,
         :session_id,
         :adapter,
         :endpoint
