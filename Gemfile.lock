@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    successware21 (0.0.1)
+    successware21_asp (0.0.1)
       activesupport
       faraday
       faraday_middleware
@@ -64,5 +64,8 @@ DEPENDENCIES
   byebug
   rake
   rspec (~> 3.1)
-  successware21!
+  successware21_asp!
   webmock (~> 1.6)
+
+BUNDLED WITH
+   1.11.2
