@@ -10,7 +10,9 @@ module Successware21Asp
             </InvoiceChangeQuery>
           </SessionRequest>
         EOF
-        post('/', data)
+        data = post('/', data)
+        return data unless data.present? && data.CustomerChangeQueryResponse
+        data.InvoiceChangeQueryResponse.InvoiceChangeQueryData.InvoiceChangeQueryRecord
       end
     end
   end
