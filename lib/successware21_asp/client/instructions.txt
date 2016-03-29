@@ -1,6 +1,6 @@
 For each resource supplied by the target API create a class here with the necessary methods to access
 that resource. For instance, if the target API provides an 'Invoice' resource there should be a 'invoices'
-class here to access it. You will also need to add or modify the includes in successware21/client.rb.
+class here to access it. You will also need to add or modify the includes in successware21_asp/client.rb.
 
 Feel free to rename or replace the existing 'customers' and 'transactions' classes. They are only provided
 as samples.
