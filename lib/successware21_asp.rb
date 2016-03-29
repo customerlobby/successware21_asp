@@ -7,6 +7,7 @@ Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each { |f| require f }
 require File.expand_path('../successware21_asp/configuration', __FILE__)
 require File.expand_path('../successware21_asp/api', __FILE__)
 require File.expand_path('../successware21_asp/client', __FILE__)
+require File.expand_path('../successware21_asp/error', __FILE__)
 
 module Successware21Asp
 
