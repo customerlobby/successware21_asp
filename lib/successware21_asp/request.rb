@@ -37,18 +37,36 @@ module Successware21Asp
       rescue Faraday::ResourceNotFound => e
         raise NotFoundError.new(e)
       rescue Faraday::ParsingError => e
-        if e.message.include?('Entity with Key') && e.message.include?('does not exist')
-          raise NotFoundError.new(e)
-        else
-          raise ParseError.new(e)
-        end
+        raise ParseError.new(e)
       rescue Faraday::SSLError => e
         raise SSLError.new(e)
       rescue => e
         raise Error.new(e)
       end
 
+      resp = handle_response(response)
+      raise ConnectionError.new(resp) unless resp == 'valid'
+
       Response.create(response.body)
+    end
+
+    def handle_response(response)
+      return response.body.SessionRequestResponse.ResultText if invalid_session_request?(response)
+      return response.body.BeginSessionResponse.ResultText if invalid_begin_session_request?(response)
+      return response.body.ConnectResponse.ResultText if invalid_connection_request?(response)
+      'valid'
+    end
+
+    def invalid_session_request?(response)
+      response.body.SessionRequestResponse && response.body.SessionRequestResponse.Successful == 'false'
+    end
+
+    def invalid_begin_session_request?(response)
+      response.body.BeginSessionResponse && response.body.BeginSessionResponse.Successful == 'false'
+    end
+
+    def invalid_connection_request?(response)
+      response.body.ConnectResponse && response.body.ConnectResponse.Successful == 'false'
     end
 
     # Format the Options before you send them off to Successware21Asp

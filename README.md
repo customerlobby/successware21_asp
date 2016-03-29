@@ -40,6 +40,11 @@ client.customers({date_time: '2010-01-01'})
 client.transactions({date_time: '2010-01-01'})
 ```
 
+Pagination is also enabled by passing an extra parameter like so:
+
+```ruby
+client.customers({page_size_: 10, page_no: 1})
+```
 
 ## Contributing
 

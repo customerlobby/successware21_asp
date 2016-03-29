@@ -2,14 +2,15 @@ module Successware21Asp
   class Client
     module Customers
 
-      def customers(params = {})
+      def customers(params = { page_size: 100, page_no: 1 })
         data = <<-EOF
           <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">
-            <CustomerChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string">
+            <CustomerChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string" PageSize="#{params[:page_size]}" PageNo="#{params[:page_no]}">
               <UTCDateTime>#{params[:date_time]}</UTCDateTime>
             </CustomerChangeQuery>
           </SessionRequest>
         EOF
+
         data = post('/', data)
         return data unless data.present? && data.CustomerChangeQueryResponse
         data.CustomerChangeQueryResponse.CustomerChangeQueryData.CustomerChangeQueryRecord
