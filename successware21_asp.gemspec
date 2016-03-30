@@ -1,10 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'successware21/version'
+require 'successware21_asp/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'successware21'
+  spec.name        = 'successware21_asp'
   spec.version     = Successware21Asp::VERSION
   spec.authors     = ['Customer Lobby']
   spec.email       = ['dev@customerlobby.com']

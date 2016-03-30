@@ -1,5 +1,5 @@
 require 'faraday_middleware'
-Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each{|f| require f}
+Dir[File.expand_path('../../faraday/*.rb', __FILE__)].each { |f| require f }
 
 module Successware21Asp
   module Connection
@@ -7,12 +7,11 @@ module Successware21Asp
 
     def connection
       options = {
-        :url => "#{endpoint}/"
+          :url => "#{endpoint}/"
       }
-      
-      # TODO: Remove or update the Successware21AspAuth middleware as needed. See the faraday/auth.rb
+
       Faraday::Connection.new(options) do |connection|
-        connection.use FaradayMiddleware::Successware21AspAuth, api_key
+        connection.use FaradayMiddleware::Successware21AspAuth
         connection.use FaradayMiddleware::Mashify
         connection.response :xml
         connection.adapter(adapter)

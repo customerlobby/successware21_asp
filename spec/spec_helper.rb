@@ -1,4 +1,4 @@
-require 'successware21'
+require 'successware21_asp'
 require 'webmock/rspec'
 
 RSpec.configure do |config|
@@ -33,7 +33,7 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
 
   # Turn on color test output.
-  config.color = true
+  config.color                            = true
 
   # Limits the available syntax to the non-monkey patched syntax that is recommended.
   # For more details, see:

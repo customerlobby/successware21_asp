@@ -7,11 +7,12 @@ module Successware21Asp
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
-    def initialize(options={})
-      options = Successware21Asp.options.merge(options)
+    def initialize(params)
+      raise 'Invalid params' unless valid_params?(params)
+      options = Successware21Asp.options.merge(params)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
-      end
+      end      
     end
 
     def config
@@ -20,6 +21,10 @@ module Successware21Asp
         conf[key] = send key
       end
       conf
+    end
+
+    def valid_params?(params)
+      Configuration::REQUIRED_KEYS.all? { |k| params.key? k }
     end
 
     include Request

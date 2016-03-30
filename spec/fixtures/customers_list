@@ -1,0 +1,324 @@
+{
+  "CustomerChangeQueryResponse" => {
+  "Successful" => "true",
+  "ResultCode" => "000",
+  "ResultText" => "Successful",
+  "Version" => "1.9.100.5",
+  "RequestID" => "string",
+  "CustomerChangeQueryData" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "QueryOptions" => "UTCDateTime=1/1/2010",
+  "CustomerChangeQueryRecord" => [
+   {
+  "LocationID" => "100030",
+  "LocationFirstName" => "Louis",
+  "LocationLastName" => "Adams",
+  "LocationCompanyName" => "Adams Sheet Metal Fabricating",
+  "LocationAddress1" => "111 South Edith Ave",
+  "LocationAddress2" => "Suite 887",
+  "LocationCity" => "West Seneca",
+  "LocationState" => "NY",
+  "LocationZip" => "14228",
+  "LocationPhone1" => "985-6234",
+  "LocationEmailAddress" => nil,
+  "LocationHasActiveAgreement" => "FALSE",
+  "LocationActiveAgreementEndDate" => nil,
+  "LocationLocationType" => "COM",
+  "LocationLeadSource" => "YP",
+  "BillingAccountID" => "100030",
+  "BillingFirstName" => "Louis",
+  "BillingLastName" => "Adams",
+  "BillingCompanyName" => "Adams Sheet Metal Fabricating",
+  "BillingAddress1" => "111 South Edith Ave",
+  "BillingAddress2" => "Suite 887",
+  "BillingCity" => "West Seneca",
+  "BillingState" => "NY",
+  "BillingZip" => "14228",
+  "BillingPhone1" => "985-6234",
+  "BillingEmailAddress" => nil,
+  "dsCustChangeBillingCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeBillingCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  },
+  "dsCustChangeLocationCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeLocationCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+  {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  }
+  },
+   {
+  "LocationID" => "100041",
+  "LocationFirstName" => "Douglas",
+  "LocationLastName" => "Fairchild",
+  "LocationCompanyName" => "MKS Supply Corporation",
+  "LocationAddress1" => "4343 Arlington Ct",
+  "LocationAddress2" => nil,
+  "LocationCity" => "Buffalo",
+  "LocationState" => "NY",
+  "LocationZip" => "14213",
+  "LocationPhone1" => "775-4563",
+  "LocationEmailAddress" => nil,
+  "LocationHasActiveAgreement" => "FALSE",
+  "LocationActiveAgreementEndDate" => nil,
+  "LocationLocationType" => "COM",
+  "LocationLeadSource" => "NEWS",
+  "BillingAccountID" => "100030",
+  "BillingFirstName" => "Louis",
+  "BillingLastName" => "Adams",
+  "BillingCompanyName" => "Adams Sheet Metal Fabricating",
+  "BillingAddress1" => "111 South Edith Ave",
+  "BillingAddress2" => "Suite 887",
+  "BillingCity" => "West Seneca",
+  "BillingState" => "NY",
+  "BillingZip" => "14228",
+  "BillingPhone1" => "985-6234",
+  "BillingEmailAddress" => nil,
+  "dsCustChangeBillingCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeBillingCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  },
+  "dsCustChangeLocationCommPrefList" => {
+  "ReturnedRows" => "0",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "__content__" => "\n\t\t\t"
+  }
+  },
+   {
+  "LocationID" => "100045",
+  "LocationFirstName" => "Andrea",
+  "LocationLastName" => "Adams",
+  "LocationCompanyName" => nil,
+  "LocationAddress1" => "33 14th Street",
+  "LocationAddress2" => "Apartment 2",
+  "LocationCity" => "Buffalo",
+  "LocationState" => "NY",
+  "LocationZip" => "14214",
+  "LocationPhone1" => "696-0097",
+  "LocationEmailAddress" => "test@test.com",
+  "LocationHasActiveAgreement" => "TRUE",
+  "LocationActiveAgreementEndDate" => nil,
+  "LocationLocationType" => "RES",
+  "LocationLeadSource" => "PREF",
+  "BillingAccountID" => "100030",
+  "BillingFirstName" => "Louis",
+  "BillingLastName" => "Adams",
+  "BillingCompanyName" => "Adams Sheet Metal Fabricating",
+  "BillingAddress1" => "111 South Edith Ave",
+  "BillingAddress2" => "Suite 887",
+  "BillingCity" => "West Seneca",
+  "BillingState" => "NY",
+  "BillingZip" => "14228",
+  "BillingPhone1" => "985-6234",
+  "BillingEmailAddress" => nil,
+  "dsCustChangeBillingCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeBillingCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  },
+  "dsCustChangeLocationCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeLocationCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "TRUE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  }
+  },
+   {
+  "LocationID" => "100047",
+  "LocationFirstName" => "Leonard",
+  "LocationLastName" => "Decaprio",
+  "LocationCompanyName" => "Caps Incorporated",
+  "LocationAddress1" => "210 Lamont Ave.",
+  "LocationAddress2" => nil,
+  "LocationCity" => "Buffalo",
+  "LocationState" => "NY",
+  "LocationZip" => "14213",
+  "LocationPhone1" => "252-0098",
+  "LocationEmailAddress" => "test@test.com",
+  "LocationHasActiveAgreement" => "FALSE",
+  "LocationActiveAgreementEndDate" => nil,
+  "LocationLocationType" => "COM",
+  "LocationLeadSource" => "YP",
+  "BillingAccountID" => "100047",
+  "BillingFirstName" => "Leonard",
+  "BillingLastName" => "Decaprio",
+  "BillingCompanyName" => "Caps Incorporated",
+  "BillingAddress1" => "210 Lamont Ave.",
+  "BillingAddress2" => nil,
+  "BillingCity" => "Buffalo",
+  "BillingState" => "NY",
+  "BillingZip" => "14213",
+  "BillingPhone1" => "252-0098",
+  "BillingEmailAddress" => "test@test.com",
+  "dsCustChangeBillingCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeBillingCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "TRUE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  },
+  "dsCustChangeLocationCommPrefList" => {
+  "ReturnedRows" => "4",
+  "FilteredRows" => "4",
+  "TotalRows" => "4",
+  "dsCustChangeLocationCommPref" => [
+   {
+  "CommClass" => "Billing",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Job Notifications",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Marketing",
+  "OptOut" => "TRUE",
+  "OptIn" => "FALSE"
+  },
+   {
+  "CommClass" => "Survey",
+  "OptOut" => "FALSE",
+  "OptIn" => "FALSE"
+  }
+  ]
+  }
+  }
+  ]
+}
+}
+}

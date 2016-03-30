@@ -5,9 +5,18 @@ RSpec.describe Successware21Asp do
     Successware21Asp.reset
   end
 
+  before do
+    @valid_params = { agent_name: 'test_agent', user_name: 'test_user', user_password: 'test_user_pw', agent_password: 'test_agent_pw', master_id: 123, company_id: 123 }
+    @invalid_params = {}
+  end
+
   describe '.client' do
-    it 'should be a Successware21Asp::Client' do
-      expect(Successware21Asp.client).to be_a(Successware21Asp::Client)
+    it 'raises an exception if not given necessary params' do      
+      expect{ Successware21Asp.client(@invalid_params) }.to raise_error('Invalid params')
+    end
+
+    it 'returns an instance of Successware21::Client if given valid params' do
+      expect(Successware21Asp.client(@valid_params)).to be_a Successware21Asp::Client
     end
   end
 

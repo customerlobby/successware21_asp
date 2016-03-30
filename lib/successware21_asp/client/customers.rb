@@ -2,24 +2,19 @@ module Successware21Asp
   class Client
     module Customers
 
-      def customers(params = {})
+      def customers(params = { page_size: 100, page_no: 1 })
         data = <<-EOF
-          <Connect Version="string">
-            <AgentName>clobby</AgentName>
-            <AgentPassword>clobby12.+</AgentPassword>
-            <MasterID>69191</MasterID>
-            <Mode>string</Mode>
-            <ServerURL>string</ServerURL>
-          </Connect>
+          <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">
+            <CustomerChangeQuery Filter="string" Max="string" OrderBy="string" StyleNo="string" StyleOptions="string" PageSize="#{params[:page_size]}" PageNo="#{params[:page_no]}">
+              <UTCDateTime>#{params[:date_time]}</UTCDateTime>
+            </CustomerChangeQuery>
+          </SessionRequest>
         EOF
 
-        post('/', data)
+        data = post('/', data)
+        return data unless data.present? && data.CustomerChangeQueryResponse
+        data.CustomerChangeQueryResponse.CustomerChangeQueryData.CustomerChangeQueryRecord
       end
-
-      def customer(id, params = {})
-        get("customers/#{id}", params)
-      end
-
     end
   end
 end

@@ -1,21 +1,27 @@
 module Successware21Asp
   module Configuration
 
+    REQUIRED_KEYS = [
+        :agent_name,
+        :user_name,
+        :user_password,
+        :agent_password,
+        :master_id,
+        :company_id
+    ]
+
     VALID_OPTIONS_KEYS = [
-        :api_key,
-        :api_version,
+        :connection_id,
+        :session_id,
         :adapter,
         :endpoint
-    ].freeze
+    ] + REQUIRED_KEYS.freeze
 
     # Use the default Faraday adapter.
     DEFAULT_ADAPTER    = Faraday.default_adapter
 
     # By default use the main api URL.
     DEFAULT_ENDPOINT   = 'http://services.successware21.com:2142'.freeze
-
-    # By default request JSON data to be returned from the API.
-    DEFAULT_FORMAT     = :json
 
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -37,6 +43,7 @@ module Successware21Asp
 
     # Reset all configuration settings to default values.
     def reset
+
       self.endpoint = DEFAULT_ENDPOINT
       self.adapter  = DEFAULT_ADAPTER
     end
