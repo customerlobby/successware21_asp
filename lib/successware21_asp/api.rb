@@ -6,6 +6,7 @@ module Successware21Asp
   class API
 
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
+    attr_accessor *Configuration::REQUIRED_KEYS
 
     def initialize(params)
       raise 'Invalid params' unless valid_params?(params)
