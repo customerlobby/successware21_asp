@@ -9,7 +9,7 @@
   "ReturnedRows" => "4",
   "FilteredRows" => "4",
   "TotalRows" => "4",
-  "QueryOptions" => "UTCDateTime=1/1/2010",
+  "QueryOptions" => "ChangedSince=1/1/2010",
   "CustomerChangeQueryRecord" => [
    {
   "LocationID" => "100030",
