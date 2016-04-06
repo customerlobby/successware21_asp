@@ -1,0 +1,8 @@
+=== 0.0.2 2016-04-06
+
+* Add endpoints to disconnect sessions and connections.
+* Add endpoint as a required parameter
+
+=== 0.0.1 2016-04-01
+
+* Initial commit with basic functionality.
