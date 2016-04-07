@@ -39,6 +39,30 @@ module Successware21Asp
         self.session_id = session_data.BeginSessionResponse.SessionID
       end
 
+      def end_session
+        data = <<-EOF
+          <SessionRequest RequestID="string" SessionID="#{self.session_id}" Version="string">
+            <EndSession Version="string">
+              <SessionID>#{self.session_id}</SessionID>
+            </EndSession>
+          </SessionRequest>
+        EOF
+
+        post('/', data)
+      end
+
+      def end_connection
+        data = <<-EOF
+          <ConnectionRequest RequestID="string" ConnectionID="#{self.connection_id}" Version="string">
+            <Disconnect Version="string">
+              <ConnectionID>#{self.connection_id}</ConnectionID>
+              <Force>1</Force>
+            </Disconnect>
+          </ConnectionRequest>
+        EOF
+
+        post('/', data)
+      end
     end
   end
 end

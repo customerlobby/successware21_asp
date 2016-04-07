@@ -7,14 +7,14 @@ module Successware21Asp
         :user_password,
         :agent_password,
         :master_id,
-        :company_id
+        :company_id,
+        :endpoint
     ]
 
     VALID_OPTIONS_KEYS = [
         :connection_id,
         :session_id,
-        :adapter,
-        :endpoint
+        :adapter
     ] + REQUIRED_KEYS.freeze
 
     # Use the default Faraday adapter.
@@ -43,7 +43,6 @@ module Successware21Asp
 
     # Reset all configuration settings to default values.
     def reset
-
       self.endpoint = DEFAULT_ENDPOINT
       self.adapter  = DEFAULT_ADAPTER
     end

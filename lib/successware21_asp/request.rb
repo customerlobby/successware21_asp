@@ -27,8 +27,8 @@ module Successware21Asp
             else
               return
           end
-          request.options.timeout      = 5 # open / read timeout is five seconds.
-          request.options.open_timeout = 2 # connection open timeout is two seconds.
+          request.options.timeout      = 30 # open / read timeout is five seconds.
+          request.options.open_timeout = 30 # connection open timeout is two seconds.
         end
       rescue Faraday::ConnectionFailed => e
         raise ConnectionError.new(e)
@@ -54,6 +54,7 @@ module Successware21Asp
       return response.body.SessionRequestResponse.ResultText if invalid_session_request?(response)
       return response.body.BeginSessionResponse.ResultText if invalid_begin_session_request?(response)
       return response.body.ConnectResponse.ResultText if invalid_connection_request?(response)
+      return 'Missing required parameter date_time' if invalid_parameters?(response)
       'valid'
     end
 
@@ -67,6 +68,10 @@ module Successware21Asp
 
     def invalid_connection_request?(response)
       response.body.ConnectResponse && response.body.ConnectResponse.Successful == 'false'
+    end
+
+    def invalid_parameters?(response)
+      response.body.CustomerChangeQueryResponse && response.body.CustomerChangeQueryResponse.Successful == 'false'
     end
 
     # Format the Options before you send them off to Successware21Asp
