@@ -55,6 +55,12 @@ client.end_session
 client.end_connection
 ```
 
+Logging can also be enabled by passing an optional parameter
+```ruby
+client = Successware21Asp.client({ agent_name: 'name', agent_password: 'password', master_id: 123, 
+                                   user_name: 'test user', user_password: 'test pass', company_id: 123, endpoint:'http://services.successware21.com:2142',
+                                   logging: true })
+```
 ## Contributing
 
 1. Fork it

@@ -3,6 +3,7 @@ PATH
   specs:
     successware21_asp (0.0.2)
       activesupport
+      builder
       faraday
       faraday_middleware
       hashie
@@ -18,6 +19,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    builder (3.2.2)
     byebug (8.2.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)

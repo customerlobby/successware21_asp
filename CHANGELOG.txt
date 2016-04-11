@@ -1,3 +1,7 @@
+=== 0.0.3 2016-04-11
+Add parameter to enable/disable logging
+Add builder to print out xml response
+
 === 0.0.2 2016-04-06
 
 * Add endpoints to disconnect sessions and connections.

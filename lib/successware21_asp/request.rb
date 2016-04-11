@@ -44,6 +44,8 @@ module Successware21Asp
         raise Error.new(e)
       end
 
+      puts(response.body.to_xml) if logging
+
       resp = handle_response(response)
       raise ConnectionError.new(resp) unless resp == 'valid'
 
