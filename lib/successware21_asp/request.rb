@@ -54,7 +54,7 @@ module Successware21Asp
       return response.body.SessionRequestResponse.ResultText if invalid_session_request?(response)
       return response.body.BeginSessionResponse.ResultText if invalid_begin_session_request?(response)
       return response.body.ConnectResponse.ResultText if invalid_connection_request?(response)
-      return 'Missing required parameter date_time' if invalid_parameters?(response)
+      return response.body.CustomerChangeQueryResponse.ResultText if invalid_parameters?(response)
       'valid'
     end
 
