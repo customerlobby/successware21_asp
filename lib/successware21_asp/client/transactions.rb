@@ -12,7 +12,7 @@ module Successware21Asp
         EOF
 
         data = post('/', data)
-        return data unless data.present? && data.CustomerChangeQueryResponse
+        return data unless data.present? && data.InvoiceChangeQueryResponse
         data.InvoiceChangeQueryResponse.InvoiceChangeQueryData.InvoiceChangeQueryRecord
       end
     end
