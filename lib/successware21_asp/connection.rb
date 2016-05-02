@@ -7,7 +7,10 @@ module Successware21Asp
 
     def connection
       options = {
-          :url => "#{endpoint}/"
+          :url => "#{endpoint}/",
+          ssl: {
+            verify: false
+          }
       }
 
       Faraday::Connection.new(options) do |connection|
