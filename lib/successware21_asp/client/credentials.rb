@@ -22,12 +22,12 @@ module Successware21Asp
         self.connection_id = connection_data.ConnectResponse.ConnectionID
       end
 
-      def set_session_id
+      def set_session_id(company_id)
         data = <<-EOF
           <ConnectionRequest RequestID="string" ConnectionID="#{self.connection_id}" Version="string">
             <BeginSession Version="string">
               <ConnectionID>#{self.connection_id}</ConnectionID>
-              <CompanyNo>#{self.company_id}</CompanyNo>
+              <CompanyNo>#{company_id}</CompanyNo>
               <Username>#{self.user_name}</Username>
               <UserPassword>#{self.user_password}</UserPassword>
               <Terminal>string</Terminal>
