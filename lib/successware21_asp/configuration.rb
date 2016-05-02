@@ -7,7 +7,6 @@ module Successware21Asp
         :user_password,
         :agent_password,
         :master_id,
-        :company_id,
         :endpoint
     ]
 
