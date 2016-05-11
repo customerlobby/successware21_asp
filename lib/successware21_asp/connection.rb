@@ -18,7 +18,9 @@ module Successware21Asp
         connection.use FaradayMiddleware::Mashify
         connection.response :xml
         connection.adapter(adapter)
-        connection.response :logger
+        if logging
+          connection.response :logger
+        end
       end
     end
   end

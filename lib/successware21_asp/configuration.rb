@@ -13,6 +13,7 @@ module Successware21Asp
     VALID_OPTIONS_KEYS = [
         :connection_id,
         :session_id,
+        :logging,
         :adapter
     ] + REQUIRED_KEYS.freeze
 
