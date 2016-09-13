@@ -47,16 +47,16 @@ module Successware21Asp
       puts(response.body.to_xml) if logging
 
       resp = handle_response(response)
-      raise ConnectionError.new(resp) unless resp == 'valid'
+      raise StandardError.new(resp) unless resp == 'valid'
 
       Response.create(response.body)
     end
 
     def handle_response(response)
-      return response.body.SessionRequestResponse.ResultText if invalid_session_request?(response)
-      return response.body.BeginSessionResponse.ResultText if invalid_begin_session_request?(response)
-      return response.body.ConnectResponse.ResultText if invalid_connection_request?(response)
-      return response.body.CustomerChangeQueryResponse.ResultText if invalid_parameters?(response)
+      raise SessionRequestError.new(response.body.SessionRequestResponse.ResultText) if invalid_session_request?(response)
+      raise BeginSessionError.new(response.body.BeginSessionResponse.ResultText) if invalid_begin_session_request?(response)
+      raise ConnectError.new(response.body.ConnectResponse.ResultText) if invalid_connection_request?(response)
+      raise CustomerChangeQueryError.new(response.body.CustomerChangeQueryResponse.ResultText) if invalid_parameters?(response)
       'valid'
     end
 

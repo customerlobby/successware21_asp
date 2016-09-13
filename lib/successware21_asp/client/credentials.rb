@@ -4,7 +4,7 @@ module Successware21Asp
 
       def set_auth_params
         set_connection_id
-        set_session_id
+        set_session_id(self.company_id)
       end
 
       def set_connection_id

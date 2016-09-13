@@ -1,7 +1,6 @@
 module Successware21Asp
   class Client
     module Transactions
-
       def transactions(params = { page_size: 100, page_no: 1 })
         data = <<-EOF
           <SessionRequest Version="string" SessionID="#{self.session_id}" RequestID="string">

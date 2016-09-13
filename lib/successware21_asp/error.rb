@@ -32,6 +32,10 @@ module Successware21Asp
   end
 
   class ConnectionError < Error; end
+  class SessionRequestError < Error; end
+  class BeginSessionError < Error; end
+  class CustomerChangeQueryError < Error; end
+  class ConnectError < Error; end
   class TimeoutError < Error; end
   class NotFoundError < Error; end
   class SSLError < Error; end
