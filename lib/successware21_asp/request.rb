@@ -56,7 +56,8 @@ module Successware21Asp
       raise SessionRequestError.new(response.body.SessionRequestResponse.ResultText) if invalid_session_request?(response)
       raise BeginSessionError.new(response.body.BeginSessionResponse.ResultText) if invalid_begin_session_request?(response)
       raise ConnectError.new(response.body.ConnectResponse.ResultText) if invalid_connection_request?(response)
-      raise CustomerChangeQueryError.new(response.body.CustomerChangeQueryResponse.ResultText) if invalid_parameters?(response)
+      raise CustomerChangeQueryError.new(response.body.CustomerChangeQueryResponse.ResultText) if invalid_customer_parameters?(response)
+      raise InvoiceChangeQueryError.new(response.body.InvoiceChangeQueryResponse.ResultText) if invalid_invoice_parameters?(response)
       'valid'
     end
 
@@ -72,9 +73,14 @@ module Successware21Asp
       response.body.ConnectResponse && response.body.ConnectResponse.Successful == 'false'
     end
 
-    def invalid_parameters?(response)
+    def invalid_customer_parameters?(response)
       response.body.CustomerChangeQueryResponse && response.body.CustomerChangeQueryResponse.Successful == 'false'
     end
+    
+    def invalid_invoice_parameters?(response)
+      response.body.InvoiceChangeQueryResponse && response.body.InvoiceChangeQueryResponse.Successful == 'false'
+    end
+    
 
     # Format the Options before you send them off to Successware21Asp
     def format_options(options)
