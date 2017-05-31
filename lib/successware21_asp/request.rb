@@ -55,7 +55,7 @@ module Successware21Asp
     def handle_response(response)
       raise SessionRequestError.new(response.body.SessionRequestResponse.ResultText) if invalid_session_request?(response)
       raise BeginSessionError.new(response.body.BeginSessionResponse.ResultText) if invalid_begin_session_request?(response)
-      raise ConnectError.new(response.body.ConnectResponse.ResultText) if invalid_connection_request?(response)
+      raise ConnectionError.new(response.body.ConnectResponse.ResultText) if invalid_connection_request?(response)
       raise CustomerChangeQueryError.new(response.body.CustomerChangeQueryResponse.ResultText) if invalid_customer_parameters?(response)
       raise InvoiceChangeQueryError.new(response.body.InvoiceChangeQueryResponse.ResultText) if invalid_invoice_parameters?(response)
       'valid'
