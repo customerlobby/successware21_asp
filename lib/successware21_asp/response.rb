@@ -1,9 +1,9 @@
 module Successware21Asp
   module Response
     def self.create(response_hash)
-      data = response_hash.data.dup rescue response_hash
+      data = response_hash.dup rescue response_hash
       data.extend(self)
-      return data
+      data
     end
 
     attr_reader :pagination
